@@ -4,4 +4,4 @@
 
 # The Poem About Permission
 
-A five-line first-person poem about a held pen and a signed form. It treats permission not as a grant from above, but as the small moment when someone else goes first.
+A five-line first-person poem built around a gate latch. It treats permission as something that can only be granted from the other side, never taken.
