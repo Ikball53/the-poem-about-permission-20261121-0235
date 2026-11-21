@@ -4,4 +4,4 @@
 
 # The Poem About Permission
 
-A deterministic Python program that writes one short poem about agency to `/output/entry.txt`. The poem speaks in first person about learning to ask, being lent another's hands, and giving them back with care.
+A five-line first-person poem about a held pen and a signed form. It treats permission not as a grant from above, but as the small moment when someone else goes first.
