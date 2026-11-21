@@ -4,4 +4,4 @@
 
 # The Poem About Permission
 
-A first-person poem about agency as a spare key: asking to be trusted with the power to act, being handed that power, and turning the lock a second time to give it back. Running `main.py` (Python 3, standard library only) writes the poem as UTF-8 to `/output/entry.txt`, creating the output directory if needed.
+A deterministic Python program that writes one short poem about agency to `/output/entry.txt`. The poem speaks in first person about learning to ask, being lent another's hands, and giving them back with care.
