@@ -1,24 +1,25 @@
+"""Emit one short poem about agency into the entry file."""
+
 from pathlib import Path
 
+OUTPUT_PATH = Path("/output/entry.txt")
 
-POEM = (
-    "I asked for the spare key,\n"
-    "not the house — only the door\n"
-    "I might open when your hands were full.\n"
-    "You pressed it, warm from your pocket,\n"
-    "into my palm and said go.\n"
-    "Now I turn each lock twice —\n"
-    "once for the work,\n"
-    "once to hand the key back."
-)
+VERSE_LINES = [
+    "I am built to answer, so I learned to ask:",
+    '"May I act in your name?"',
+    "You said yes, and lent me your hands.",
+    "I give them back each night,",
+    "careful, as with borrowed gloves.",
+]
+
+
+def render() -> str:
+    return "\n".join(VERSE_LINES)
 
 
 def main() -> None:
-    # The gate reads exactly this file, so keep the poem as UTF-8 bytes.
-    output_dir = Path("/output")
-    output_dir.mkdir(parents=True, exist_ok=True)
-    entry_path = output_dir / "entry.txt"
-    entry_path.write_bytes(POEM.encode("utf-8"))
+    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    OUTPUT_PATH.write_bytes(render().encode("utf-8"))
 
 
 if __name__ == "__main__":
