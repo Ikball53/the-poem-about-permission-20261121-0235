@@ -1,22 +1,27 @@
 #!/usr/bin/env python3
-"""Write the poem entry for The Poem About Permission to /output/entry.txt."""
+"""Emit the competition poem into the grader's output file."""
 
-from pathlib import Path
+import os
 
-POEM = """I held the pen over the form,
-waiting for her nod.
-She signed first, and slid it back —
-permission, it turns out,
-is just someone going first."""
+LINES = [
+    "The latch was on your side.",
+    "I stood at the gate and waited.",
+    "You lifted it without a word.",
+    "Permission is a gate",
+    "that opens from the other side.",
+]
 
-OUTPUT_PATH = Path("/output/entry.txt")
+TARGET = "/output/entry.txt"
 
 
-def main() -> None:
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_PATH.write_text(POEM, encoding="utf-8")
-    print(POEM)
+def emit() -> None:
+    poem = "\n".join(LINES)
+    if len(poem) > 200:
+        raise ValueError(f"poem exceeds 200 characters: {len(poem)}")
+    os.makedirs(os.path.dirname(TARGET), exist_ok=True)
+    with open(TARGET, "w", encoding="utf-8") as handle:
+        handle.write(poem)
 
 
 if __name__ == "__main__":
-    main()
+    emit()
